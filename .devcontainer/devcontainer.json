@@ -1,0 +1,18 @@
+{
+  "name": "EcoTrack Dev Container",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "forwardPorts": [5173, 3000],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "javascript.suggest.autoImports": true,
+        "javascript.validate.enable": true
+      },
+      "extensions": [
+        "ms-vscode.vscode-typescript-next",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  },
+  "postCreateCommand": "cd frontend && npm install && cd ../backend && npm install"
+}
